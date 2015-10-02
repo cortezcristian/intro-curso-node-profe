@@ -8,7 +8,9 @@ var server = net.createServer(function(s){
 
     s.on('data', function(d){
         sockets.forEach(function(v,i){
-          v.write(d);    
+          if(v!==s){
+            v.write(d);
+          }
         });
     });
 
