@@ -1,1 +1,2 @@
-console.log("Hola mundo");
+require('colors');
+console.log("Hola mundo".rainbow);
