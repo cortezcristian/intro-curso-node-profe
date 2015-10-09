@@ -9,6 +9,6 @@
   "author": "Cristian Cortez <cortez.cristian@gmail.com> (http://cortezcristian.com/)",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "1.1.2"
   }
 }
