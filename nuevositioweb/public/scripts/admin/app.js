@@ -140,7 +140,25 @@ angular
           }
         }
       })
+      .when('/crud/product', {
+        templateUrl: '/scripts/admin/views/product.html',
+        controller: 'ProductCtrl'
+      })
+      .when('/crud/product-new', {
+        templateUrl: '/forms/product/create',
+        controller: 'ProductNewCtrl'
+      })
+      .when('/crud/product-edit/:id', {
+        templateUrl: '/forms/product/create',
+        controller: 'ProductEditCtrl',
+        resolve: {
+          product: function(Restangular, $route){
+            return Restangular.one('products', $route.current.params.id).get();
+          }
+        }
+      })
       .otherwise({
+
 
         redirectTo: '/'
       });
