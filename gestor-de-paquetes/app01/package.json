@@ -1,0 +1,15 @@
+{
+  "name": "app01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Cortez <cortez.cristian@gmail.com> (http://cortezcristian.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "1.1.2"
+  }
+}
