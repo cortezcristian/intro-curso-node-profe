@@ -12,6 +12,9 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/crudtest');
 
 var app = express();
+exports.app = app;
+
+require('./routes/main.js');
 
 // view engine setup
 
