@@ -16,6 +16,11 @@ exports.app = app;
 
 require('./routes/main.js');
 
+// Extra manejo de Excepciones Global
+process.on('uncaughtException', function(err) {
+  console.log('Caught exception: ' + err);
+});
+
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
