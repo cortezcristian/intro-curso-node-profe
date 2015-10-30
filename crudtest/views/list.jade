@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  pre=JSON.stringify(persons)
+  p
+    a(href="/p/new") New
+  table
+    tr
+      th N
+      th Name
+      th Age
+      th Options
+    - persons.forEach(function(v,i){
+    tr
+      td=i+1
+      td=v.name
+      td #{v.age} years
+      td
+        a(href="/p/edit/"+v._id) Edit
+        | 
+        a(href="/p/delete/"+v._id) Delete
+    - });
