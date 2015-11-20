@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  form(action='',method='post')
+    div
+      label(for='name') Name:
+      input(type='text', name='name', id='name', placeholder='Name here...')
+    div
+      label(for='age') Age:
+      input(type='text', name='age', id='age', placeholder='Age...')
+    div
+      input(type='submit', value='Save')
+  style.
+    form label { min-width: 80px; display: inline-block; }
+    form > div { padding: 5px; }
