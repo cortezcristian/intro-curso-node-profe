@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Login
+  p Welcome to #{title}
+  form(method="POST",action="")
+    div
+      label(for='email') E-mail:
+      input(type='text', name='email', id='email', placeholder='E-mail here...')
+    div
+      label(for='password') Pasword:
+      input(type='password', name='password', id='password', placeholder='Password...')
+    div
+      input(type='submit', value='Login')
