@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+exports.passport = passport;
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
@@ -33,6 +35,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./auth/local-strategy.js');
 
 app.use('/', routes);
 app.use('/users', users);
