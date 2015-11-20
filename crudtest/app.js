@@ -14,7 +14,6 @@ mongoose.connect('mongodb://localhost/crudtest');
 var app = express();
 exports.app = app;
 
-require('./routes/main.js');
 
 // Extra manejo de Excepciones Global
 process.on('uncaughtException', function(err) {
@@ -37,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+require('./routes/main.js');
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

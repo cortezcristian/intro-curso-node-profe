@@ -10,3 +10,12 @@ app.get('/list', function(req, res){
 app.post('/list', function(req, res){
   res.end('It works!');
 });
+
+// Authentication
+app.get('/login', function(req, res){
+    res.render('login', {})
+});
+
+app.post('/login', function(req, res){
+  res.json(req.body);
+});
